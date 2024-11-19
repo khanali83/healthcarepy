@@ -1,0 +1,172 @@
+/* Basic Body Styles */
+body {
+    font-family: 'Arial', sans-serif; /* Sets the font to Arial for better readability */
+    background-color: #f5f5f5; /* Light grey background for the page */
+    color: #333; /* Dark grey text for better contrast and readability */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+    display: flex; /* Uses flexbox for centering content */
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Centers the content vertically */
+    height: 100vh; /* Ensures the content takes up the full viewport height */
+}
+
+/* Main App Container */
+.App {
+    display: flex; /* Flexbox layout for easy centering */
+    justify-content: center; /* Horizontally centers the content */
+    align-items: center; /* Vertically centers the content */
+    height: 100%; /* Ensures the App takes up full height */
+    width: 100%; /* Ensures the App takes up full width */
+    background-color: #ffffff; /* White background for the content area */
+}
+
+/* Header Container */
+.App-header {
+    background-color: #2d3e50; /* Dark blue background for the header */
+    color: white; /* White text color */
+    padding: 30px; /* Adds padding around the header */
+    border-radius: 15px; /* Rounded corners for the header */
+    width: 50%; /* Sets the width to 50% of the viewport */
+    max-width: 600px; /* Ensures the header doesn't stretch too wide */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for 3D effect */
+    text-align: center; /* Centers the text inside the header */
+    animation: fadeIn 1s ease-in-out; /* Animation to fade in the header */
+}
+
+/* Dashboard Title */
+.dashboard-title {
+    font-size: 36px; /* Larger font for the title */
+    margin-bottom: 30px; /* Adds space below the title */
+    font-weight: 700; /* Makes the title bold */
+}
+
+/* Form Container */
+.form-container {
+    width: 100%; /* Takes full width */
+}
+
+/* Form Styles */
+form {
+    display: flex; /* Flexbox layout for form elements */
+    flex-direction: column; /* Stacks form elements vertically */
+    gap: 20px; /* Adds space between form elements */
+    animation: slideIn 1s ease-in-out; /* Animation for sliding the form in */
+}
+
+/* Input Group (Form Elements) */
+.input-group {
+    display: flex; /* Flexbox for aligning the label and input */
+    flex-direction: column; /* Stacks the label and input vertically */
+    text-align: left; /* Aligns the label text to the left */
+    gap: 8px; /* Adds space between the label and input */
+}
+
+/* Styles for File Input */
+.input-group.file-input {
+    display: flex; /* Ensures the file input group uses flexbox */
+    flex-direction: column; /* Stacks the file input label and button vertically */
+    align-items: flex-start; /* Aligns items to the start of the container */
+}
+
+/* Styles for Text Inputs and Select Dropdowns */
+input, select {
+    padding: 12px; /* Adds padding for better spacing inside inputs */
+    font-size: 16px; /* Standard font size for input text */
+    border-radius: 8px; /* Rounded corners for input elements */
+    border: 1px solid #ccc; /* Light grey border for inputs */
+    box-sizing: border-box; /* Ensures padding doesn't affect element width */
+    width: 100%; /* Makes the input and select elements full-width */
+    transition: all 0.3s ease; /* Smooth transition effect for all properties */
+}
+
+/* Hidden File Input (Styled with Button) */
+input[type="file"] {
+    padding: 10px 0; /* Adds padding but keeps it visually hidden */
+    display: none; /* Hides the default file input element */
+}
+
+/* Custom File Choose Button */
+button.choose-file-button {
+    background-color: #1e90ff; /* Blue background for the file button */
+    color: white; /* White text */
+    padding: 12px; /* Adds padding to the button */
+    font-size: 16px; /* Font size for the button text */
+    border: none; /* No border for the button */
+    border-radius: 8px; /* Rounded corners for the button */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+    margin-left: 0.1cm; /* Small left margin for better alignment */
+}
+
+/* Hover Effect for File Choose Button */
+button.choose-file-button:hover {
+    background-color: #1c75b3; /* Darkens the background on hover */
+    transform: translateY(-3px); /* Adds slight lift on hover */
+}
+
+/* Submit Button Styles */
+button.submit-button {
+    background-color: #4CAF50; /* Green background for the submit button */
+    color: white; /* White text */
+    padding: 15px; /* Adds padding for better spacing */
+    font-size: 18px; /* Larger font size for better visibility */
+    border: none; /* Removes the default border */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Hover Effect for Submit Button */
+button.submit-button:hover {
+    background-color: #45a049; /* Darkens the button on hover */
+    transform: translateY(-3px); /* Adds a lift effect on hover */
+}
+
+/* File Name Display */
+.file-name {
+    font-size: 16px; /* Font size for the file name */
+    margin-left: 10px; /* Adds margin to the left */
+    color: #333; /* Dark grey color for better contrast */
+    font-weight: 500; /* Slightly bold for visibility */
+}
+
+/* Success Message for File Selection */
+.file-success-message {
+    color: #4CAF50; /* Green text for success message */
+    font-size: 16px; /* Standard font size for the success message */
+    margin-top: 10px; /* Adds margin above the message */
+    text-align: left; /* Left-aligns the message */
+}
+
+/* Focus Styles for Buttons (Improves Accessibility) */
+button.choose-file-button:focus,
+button.submit-button:focus {
+    outline: none; /* Removes the default outline */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.6); /* Blue outline on focus for accessibility */
+}
+
+/* Additional Styling for File Input Text Color */
+input[type="file"]:valid ~ .file-name {
+    color: white; /* Changes the text color to white when a valid file is selected */
+}
+
+/* Keyframe Animation for Fade-in Effect */
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /* Starts the element invisible */
+    }
+    100% {
+        opacity: 1; /* Fades the element to full visibility */
+    }
+}
+
+/* Keyframe Animation for Form Slide-in */
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%); /* Starts the form off-screen to the left */
+    }
+    100% {
+        transform: translateX(0); /* Slides the form into the visible area */
+    }
+}
